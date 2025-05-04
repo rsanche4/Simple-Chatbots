@@ -96,8 +96,8 @@ Enter roleplay mode. You shall reply to USER while staying in character. Your re
             do_sample=True,
             max_new_tokens=65,
             eos_token_id=self.tokenizer.eos_token_id,
-            pad_token_id=self.tokenizer.eos_token_id)
-            #repetition_penalty=1.2)
+            pad_token_id=self.tokenizer.eos_token_id,
+            repetition_penalty=1.1)
         
         result = self.tokenizer.decode(output[0], skip_special_tokens=True)
         
